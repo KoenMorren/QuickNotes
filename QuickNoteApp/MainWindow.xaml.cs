@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickNoteApp.Configuration;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Forms;
@@ -8,15 +9,43 @@ namespace QuickNoteApp
     public partial class MainWindow : Window
     {
         private NotifyIcon trayIcon;
-        private string noteFilePath = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "quicknote.txt");
+        private readonly string noteFilePath;
 
         public MainWindow()
         {
             InitializeComponent();
             InitializeTray();
+
+
+            var config = new ConfigHelper().LoadConfig();
+            noteFilePath = config.FilePath;
+
+            if (config is not null)
+            {
+                if (config.FilePath != null)
+                {
+                    noteFilePath = config.FilePath;
+                }
+
+                ApplyFontConfig(config.Font);
+            }
+
             LoadNote();
+
+            TextEditor.CaretIndex = TextEditor.Text.Length;
         }
+
+        private void ApplyFontConfig(FontConfig fontConfig)
+        {
+            if (fontConfig == null)
+            {
+                return;
+            }
+
+            TextEditor.FontFamily = new System.Windows.Media.FontFamily(fontConfig.FontName);
+            TextEditor.FontSize = fontConfig.FontSize;
+        }
+
 
         private void InitializeTray()
         {
@@ -61,7 +90,6 @@ namespace QuickNoteApp
             this.Topmost = false; // then not topmost to allow focus to stick
 
             TextEditor.Focus();
-            TextEditor.CaretIndex = TextEditor.Text.Length;
         }
 
         private void LoadNote()

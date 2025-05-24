@@ -10,7 +10,9 @@
         ShowInTaskbar="False"
         Topmost="True"
         WindowStyle="None"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        FontFamily="Cascadia Code"
+        FontSize="14">
     <Grid>
         <TextBox Name="TextEditor" AcceptsReturn="True" AcceptsTab="True"
              VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"

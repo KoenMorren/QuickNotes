@@ -1,9 +1,11 @@
 # QuickNote app
 
 # To do
-* [ ] Make filepath configurable
+* [x] Make filepath configurable
 * [ ] Make shortcut key configurable
-* [ ] Change font + add font ligatures
+* [x] Make font configurable
+* [ ] Make font ligatures configurable
 * [ ] Add system check for dark mode
 * [ ] Markdown support?
-* [ ] Fix the icon to have a white background
+* [x] Fix the icon to have a white background
+* [ ] Make it pretty

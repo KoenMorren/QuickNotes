@@ -19,3 +19,4 @@ C:\workspace\kmd\quicknote\QuickNoteApp\obj\Debug\net6.0-windows\QuickNoteApp.pd
 C:\workspace\kmd\quicknote\QuickNoteApp\obj\Debug\net6.0-windows\QuickNoteApp.genruntimeconfig.cache
 C:\workspace\kmd\quicknote\QuickNoteApp\obj\Debug\net6.0-windows\ref\QuickNoteApp.dll
 C:\workspace\kmd\quicknote\QuickNoteApp\bin\Debug\net6.0-windows\TrayIcon_v2.ico
+C:\workspace\kmd\quicknote\QuickNoteApp\bin\Debug\net6.0-windows\config.json
