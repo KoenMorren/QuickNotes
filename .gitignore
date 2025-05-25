@@ -1,0 +1,75 @@
+# Build output
+bin/
+obj/
+out/
+
+# VS Code & Rider
+.vscode/
+.idea/
+
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+
+# Build logs
+*.log
+
+# Auto-generated files
+Generated\
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Dotnet-specific
+*.deps.json
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+*.dll
+*.pdb
+*.exe
+
+# Config (optional: keep if needed)
+config.json
+!config.sample.json  # Keep a sample config
+
+# Publish folder
+publish/
+AppPackages/
+BundleArtifacts/
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+*.swp
+*.DS_Store
+*.Thumbs.db
+
+# Resharper files
+_ReSharper*/
+*.DotSettings.user
+
+# Windows image thumbnails
+ehthumbs.db
+
+# JetBrains Rider
+.idea/
+
+# User secrets
+secrets.json
+
+# Environment files
+.env
+.env.*
+
+# Visual Studio files
+.vs
