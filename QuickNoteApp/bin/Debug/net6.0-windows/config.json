@@ -1,5 +1,11 @@
 {
   "FilePath": "C:\\workspace\\kmd\\quicknote.txt",
+  "Shortcut": "ALT+E",
+  "DarkMode": true,
+  "Resolution": {
+    "Width": 800,
+    "Height": 900
+  },
   "Font": {
     "FontName": "Fira Code",
     "FontSize": 14,

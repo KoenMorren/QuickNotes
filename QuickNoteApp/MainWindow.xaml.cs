@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace QuickNoteApp
 {
@@ -27,6 +28,18 @@ namespace QuickNoteApp
                     noteFilePath = config.FilePath;
                 }
 
+                if (config.DarkMode)
+                {
+                    ApplyDarkTheme();
+                }
+                else
+                {
+                    this.Background = Brushes.DarkCyan;
+                }
+
+                this.Width = config.Resolution.Width;
+                this.Height = config.Resolution.Height;
+
                 ApplyFontConfig(config.Font);
             }
 
@@ -46,6 +59,13 @@ namespace QuickNoteApp
             TextEditor.FontSize = fontConfig.FontSize;
         }
 
+        private void ApplyDarkTheme()
+        {
+            TextEditor.Background = new SolidColorBrush(Color.FromRgb(30, 30, 30));
+            TextEditor.Foreground = Brushes.White;
+            TextEditor.BorderBrush = new SolidColorBrush(Color.FromRgb(60, 60, 60));
+            TextEditor.CaretBrush = Brushes.White;
+        }
 
         private void InitializeTray()
         {
